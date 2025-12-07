@@ -149,7 +149,7 @@ problem-solving, and technical skills to deliver impactful results
              <div className="absolute inset-0 bg-gradient-to-b from-purple-900/20 to-black/80 z-0" />
              
              <img 
-               src="/images/profile/dhivyashri.jpg" 
+               src={process.env.PUBLIC_URL + '/images/profile/dhivyashri.jpg'}
                alt="Dhivyashri"
                className="absolute inset-0 w-full h-full object-cover opacity-90 hover:scale-105 transition-transform duration-700"
              />

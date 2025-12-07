@@ -80,7 +80,7 @@ const Header = () => {
               className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-600 to-fuchsia-600 p-0.5"
             >
               <img
-                src="/images/profile/dhivyashri.jpg"
+                src={process.env.PUBLIC_URL + '/images/profile/dhivyashri.jpg'}
                 alt="Dhivyashri"
                 className="w-full h-full rounded-full object-cover bg-black"
                 onError={(e) => {

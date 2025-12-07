@@ -11,7 +11,7 @@ const Achievements = () => {
       title: 'Prompt Legacy Prize',
       caption: "MINKSY'24 Symposium",
       description: 'Won II Prize in the Prompt Legacy event organized by the AI Association.',
-      image: '/certificates/image_prompting.jpg',
+      image: process.env.PUBLIC_URL + '/certificates/image_prompting.jpg',
       date: '2024',
       category: 'Competition'
     },
@@ -20,7 +20,7 @@ const Achievements = () => {
       title: 'Paper Presentation',
       caption: 'ACME 2K25 Symposium',
       description: 'Secured III prize in the Paper Presentation event at the Inter Department Technical Symposium ACME 2K25.',
-      image: '/certificates/metaverse.jpg',
+      image: process.env.PUBLIC_URL + '/certificates/metaverse.jpg',
       date: '2025',
       category: 'Competition'
     },
@@ -29,7 +29,7 @@ const Achievements = () => {
       title: 'Paper Presentation',
       caption: "SIGNIN'25 Symposium",
       description: 'Secured I / II / III place in the Paper Presentation event at the Intra-Department Technical Symposium SIGNIN\'25.',
-      image: '/certificates/signin.jpg',
+      image: process.env.PUBLIC_URL + '/certificates/signin.jpg',
       date: '2023',
       category: 'Competition'
     },
@@ -38,7 +38,7 @@ const Achievements = () => {
       title: 'Hackathon Winner',
       caption: 'SIH-Internal Hackathon 2025',
       description: 'Won FIRST Prize in the Software/Hardware category as part of team CREW-X for Problem Statement ID SIH25013.',
-      image: '/certificates/sih_internal.jpg',
+      image: process.env.PUBLIC_URL + '/certificates/sih_internal.jpg',
       date: '2025',
       category: 'Competition'
     },
@@ -56,7 +56,7 @@ const Achievements = () => {
       title: 'Academic Excellence',
       caption: 'Perfect 10 GPA',
       description: 'Secured a perfect 10 GPA out of 10 in the  Second Semester Exams during First Year IT.',
-        image: '/certificates/gpa_10.jpg',
+        image: process.env.PUBLIC_URL + '/certificates/gpa_10.jpg',
       date: '2024',
       category: 'Academic'
     }

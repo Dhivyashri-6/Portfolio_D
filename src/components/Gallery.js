@@ -10,31 +10,31 @@ const Gallery = () => {
     {
       id: 1,
       title: 'GrowthSpace App UI',
-      image: '/images/gallery/growthspace.jpg',
+      image: process.env.PUBLIC_URL + '/images/gallery/growthspace.jpg',
       type: 'image',
       link: 'https://www.figma.com/design/mRb5jHNfua4EUe6Qwn8T0E/growthspace-Day2?node-id=0-1&t=w224pJX3q6gSJ6cL-1'
     },
     {
       id: 2,
       title: 'Jewelry Website UI',
-      image: '/images/gallery/jewel website day-1.jpg',
+      image: process.env.PUBLIC_URL + '/images/gallery/jewel website day-1.jpg',
       type: 'image',
       link: 'https://www.figma.com/proto/pZiXZahxOVfOR8Vp9QYcFh/jewel-website-day-1?page-id=0%3A1&node-id=32-3&p=f&viewport=136%2C-87%2C0.26&t=ZA5u6lx18lGr4z5i-1&scaling=scale-down&content-scaling=fixed'
     },
     {
       id: 3,
       title: 'Vanilla UI ',
-      image: '/images/gallery/vannila.jpg',
+      image: process.env.PUBLIC_URL + '/images/gallery/vannila.jpg',
       type: 'video',
-      videoUrl: '/images/gallery/cakes_figma.mp4', // Replace with actual video URL
+      videoUrl: process.env.PUBLIC_URL + '/images/gallery/cakes_figma.mp4', // Replace with actual video URL
       link: 'https://www.figma.com/design/QephMAKMfRQvFurOzVNxQB/Untitled?node-id=1-74&t=UQcn7igx9ioZ6Ims-1'
     },
     {
       id: 4,
       title: 'Landscape Photography',
-      image: '/images/gallery/landscape.jpg',
+      image: process.env.PUBLIC_URL + '/images/gallery/landscape.jpg',
       type: 'video',
-      videoUrl: '/images/gallery/nature_figma.mp4', // Replace with actual video URL
+      videoUrl: process.env.PUBLIC_URL + '/images/gallery/nature_figma.mp4', // Replace with actual video URL
       link: 'https://www.figma.com/design/gMPPwz9qBlVpSkEeBoA8lT/Untitled?node-id=0-1&t=tobTY1kOBa0TDkal-1'
     }
   ];
