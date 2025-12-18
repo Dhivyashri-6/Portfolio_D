@@ -113,21 +113,15 @@ problem-solving, and technical skills to deliver impactful results
               Let's Connect <FiArrowRight />
             </motion.button>
             
-            <motion.button
+            <motion.a
+              href={process.env.PUBLIC_URL + "/documents/Dhivyashri_Resume.pdf"}
+              download="Dhivyashri_Resume.pdf"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="px-6 py-3 bg-transparent border border-zinc-700 text-white rounded-full font-bold text-sm flex items-center gap-2 hover:bg-zinc-900 transition-colors"
-              onClick={() => {
-                 const link = document.createElement('a');
-                 link.href = '/documents/Dhivyashri_Resume.pdf';
-                 link.download = 'Dhivyashri_Resume.pdf';
-                 document.body.appendChild(link);
-                 link.click();
-                 document.body.removeChild(link);
-              }}
+              className="px-6 py-3 bg-transparent border border-zinc-700 text-white rounded-full font-bold text-sm flex items-center gap-2 hover:bg-zinc-900 transition-colors cursor-pointer"
             >
               Resume <FiDownload />
-            </motion.button>
+            </motion.a>
           </div>
 
           <div className="flex gap-5 pt-6 border-t border-zinc-800/50">

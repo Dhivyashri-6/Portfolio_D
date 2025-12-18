@@ -44,8 +44,8 @@ const Projects = () => {
       description: 'Personal portfolio website showcasing projects, skills, and achievements with interactive animations.',
       image: process.env.PUBLIC_URL + '/images/projects/portfolio.jpg',
       technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
-      github: 'https://github.com/yourusername/portfolio',
-      live: 'https://portfolio-demo.com',
+      github: 'https://github.com/Dhivyashri-6/Portfolio_D.git',
+      live: 'https://portfolio-d-amber.vercel.app/',
       figma: 'https://figma.com/file/portfolio',
       color: 'group-hover:border-purple-500/50'
     },
