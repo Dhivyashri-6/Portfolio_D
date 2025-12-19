@@ -11,9 +11,8 @@ const Projects = () => {
       description: 'Full-featured e-commerce platform with user authentication, payment integration, and admin dashboard.',
       image: process.env.PUBLIC_URL + '/images/projects/voicescript.jpg',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      github: 'https://github.com/yourusername/ecommerce',
-      live: 'https://ecommerce-demo.com',
-      figma: 'https://figma.com/file/ecommerce',
+      github: 'https://github.com/Dhivyashri-6/voicescript.git',
+      live: 'https://voicescript-one.vercel.app/,
       color: 'group-hover:border-purple-500/50'
     },
     {
@@ -22,9 +21,8 @@ const Projects = () => {
       description: 'PhishGuard instantly analyzes URLs and email links, providing real-time warnings to protect you from phishing scams and malicious websites.',
       image: process.env.PUBLIC_URL + '/images/projects/PhishGuard.jpg',
       technologies: ['React', 'OpenAI', 'Socket.io', 'Python'],
-      github: 'https://github.com/yourusername/ai-chat',
-      live: 'https://ai-chat-demo.com',
-      figma: 'https://figma.com/file/ai-chat',
+      github: 'https://github.com/Dhivyashri-6/Portfolio_D.git',
+      live: 'https://portfolio-d-amber.vercel.app/',
       color: 'group-hover:border-blue-500/50'
     },
     {
@@ -33,9 +31,8 @@ const Projects = () => {
       description: 'A platform connecting blood donors with those in need, featuring real-time notifications and location tracking.',
       image: process.env.PUBLIC_URL + '/images/projects/bloodconnect.jpg',
       technologies: ['React', 'Node.js', 'MongoDB', 'Express'],
-      github: 'https://github.com/yourusername/blood-connect',
-      live: 'https://blood-connect-demo.com',
-      figma: 'https://figma.com/file/blood-connect',
+      github: 'https://github.com/Dhivyashri-6/blood_donation_platform.git',
+      live: 'https://blood-donation-platform-xi.vercel.app/ ',
       color: 'group-hover:border-red-500/50'
     },
     {
@@ -46,7 +43,6 @@ const Projects = () => {
       technologies: ['React', 'Tailwind CSS', 'Framer Motion'],
       github: 'https://github.com/Dhivyashri-6/Portfolio_D.git',
       live: 'https://portfolio-d-amber.vercel.app/',
-      figma: 'https://figma.com/file/portfolio',
       color: 'group-hover:border-purple-500/50'
     },
     {
@@ -55,9 +51,8 @@ const Projects = () => {
       description: 'A comprehensive portal for startups to register, manage their profiles, and connect with investors.',
       image: process.env.PUBLIC_URL + '/images/projects/startup.jpg',
       technologies: ['React', 'Firebase', 'Material UI'],
-      github: 'https://github.com/yourusername/startup-portal',
+      github: 'https://github.com/Dhivyashri-6/Startup_Registration_portal.git',
       live: 'https://startup-portal-demo.com',
-      figma: 'https://figma.com/file/startup-portal',
       color: 'group-hover:border-orange-500/50'
     },
     {
@@ -66,9 +61,8 @@ const Projects = () => {
       description: 'Analyzes the complexity and time trade-offs of Brute-force, Presorting-based, and Divide-and-Conquer algorithms for finding the minimum and maximum elements in an array.',
       image: process.env.PUBLIC_URL + '/images/projects/daa.jpg',
       technologies: ['React', 'TypeScript', 'Tailwind', 'Zustand'],
-      github: 'https://github.com/yourusername/task-manager',
-      live: 'https://task-manager-demo.com',
-      figma: 'https://figma.com/file/task-manager',
+      github: 'https://github.com/Dhivyashri-6/DAA-MINIPROJECT.git',
+      live: ' https://dhivyashri-6.github.io/DAA-MINIPROJECT/',
       color: 'group-hover:border-emerald-500/50'
     }
   ];
