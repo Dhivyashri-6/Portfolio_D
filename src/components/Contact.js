@@ -39,7 +39,7 @@ const Contact = () => {
     // TODO: Replace with your actual EmailJS Service ID, Template ID, and Public Key
     // You can get these from your EmailJS dashboard: https://dashboard.emailjs.com/
     const serviceId = 'service_3tvstme';
-    const templateId = 'template_4bcfwas';
+    const templateId = 'c8v5h8a';
     const publicKey = 'RcIJVAveB4K919TRO';
 
     // Prepare the template parameters
@@ -47,6 +47,9 @@ const Contact = () => {
     const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
+      // Adding these to match the variables in your screenshot
+      name: formData.name,
+      email: formData.email,
       subject: formData.subject,
       message: formData.message,
     };
