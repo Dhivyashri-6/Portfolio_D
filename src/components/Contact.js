@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import emailjs from '@emailjs/browser';
 // eslint-disable-next-line no-unused-vars
 import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiCalendar, FiDownload } from 'react-icons/fi';
 
@@ -32,49 +31,39 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // TODO: Replace with your actual EmailJS Service ID, Template ID, and Public Key
-    // You can get these from your EmailJS dashboard: https://dashboard.emailjs.com/
-    const serviceId = 'service_3tvstme';
-    const templateId = 'template_4bcfwas';
-    const publicKey = 'RcIJVAveB4K919TRO';
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
 
-    // Prepare the template parameters
-    // Make sure these match the variables in your EmailJS template
-    const templateParams = {
-      from_name: formData.name,
-      from_email: formData.email,
-      // Adding these to match the variables in your screenshot
-      name: formData.name,
-      email: formData.email,
-      subject: formData.subject,
-      message: formData.message,
-    };
+      const data = await response.json();
 
-    emailjs.send(serviceId, templateId, templateParams, publicKey)
-      .then((response) => {
-        console.log('SUCCESS!', response.status, response.text);
+      if (response.ok) {
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => {
           setSubmitStatus(null);
         }, 5000);
-      })
-      .catch((err) => {
-        console.error('FAILED...', err);
-        // Show the actual error message to help debug
-        alert("Failed to send: " + JSON.stringify(err));
-        setSubmitStatus('error');
-        setTimeout(() => {
-          setSubmitStatus(null);
-        }, 5000);
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
+      } else {
+        throw new Error(data.message || 'Failed to send message');
+      }
+    } catch (error) {
+      console.error('FAILED...', error);
+      setSubmitStatus('error');
+      setTimeout(() => {
+        setSubmitStatus(null);
+      }, 5000);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
