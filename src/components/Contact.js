@@ -65,6 +65,8 @@ const Contact = () => {
       })
       .catch((err) => {
         console.error('FAILED...', err);
+        // Show the actual error message to help debug
+        alert("Failed to send: " + JSON.stringify(err));
         setSubmitStatus('error');
         setTimeout(() => {
           setSubmitStatus(null);
