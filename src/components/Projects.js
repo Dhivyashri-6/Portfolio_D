@@ -12,7 +12,7 @@ const Projects = () => {
       image: process.env.PUBLIC_URL + '/images/projects/voicescript.jpg',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
       github: 'https://github.com/Dhivyashri-6/voicescript.git',
-      live: 'https://voicescript-one.vercel.app/,
+      live: 'https://voicescript-one.vercel.app/',
       color: 'group-hover:border-purple-500/50'
     },
     {
