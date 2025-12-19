@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
 // eslint-disable-next-line no-unused-vars
 import { FiMail, FiPhone, FiMapPin, FiSend, FiGithub, FiLinkedin, FiCalendar, FiDownload } from 'react-icons/fi';
 
@@ -31,20 +32,44 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      
-      setTimeout(() => {
-        setSubmitStatus(null);
-      }, 3000);
-    }, 2000);
+
+    // TODO: Replace with your actual EmailJS Service ID, Template ID, and Public Key
+    // You can get these from your EmailJS dashboard: https://dashboard.emailjs.com/
+    const serviceId = 'service_3tvstme';
+    const templateId = 'template_4bcfwas';
+    const publicKey = 'RcIJVAveB4K919TRO';
+
+    // Prepare the template parameters
+    // Make sure these match the variables in your EmailJS template
+    const templateParams = {
+      from_name: formData.name,
+      from_email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then((response) => {
+        console.log('SUCCESS!', response.status, response.text);
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      })
+      .catch((err) => {
+        console.error('FAILED...', err);
+        setSubmitStatus('error');
+        setTimeout(() => {
+          setSubmitStatus(null);
+        }, 5000);
+      })
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   const contactInfo = [
@@ -282,6 +307,15 @@ const Contact = () => {
                   className="text-green-500 text-center text-sm"
                 >
                   Message sent successfully! I'll get back to you soon.
+                </motion.div>
+              )}
+              {submitStatus === 'error' && (
+                <motion.div
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="text-red-500 text-center text-sm"
+                >
+                  Failed to send message. Please try again later.
                 </motion.div>
               )}
             </form>
