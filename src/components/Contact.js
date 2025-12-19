@@ -39,7 +39,7 @@ const Contact = () => {
     // TODO: Replace with your actual EmailJS Service ID, Template ID, and Public Key
     // You can get these from your EmailJS dashboard: https://dashboard.emailjs.com/
     const serviceId = 'service_3tvstme';
-    const templateId = 'c8v5h8a';
+    const templateId = 'template_4bcfwas';
     const publicKey = 'RcIJVAveB4K919TRO';
 
     // Prepare the template parameters
@@ -57,6 +57,7 @@ const Contact = () => {
     emailjs.send(serviceId, templateId, templateParams, publicKey)
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
+        alert("Email sent successfully!"); // Added alert to verify
         setSubmitStatus('success');
         setFormData({ name: '', email: '', subject: '', message: '' });
         setTimeout(() => {
@@ -65,6 +66,7 @@ const Contact = () => {
       })
       .catch((err) => {
         console.error('FAILED...', err);
+        alert("Failed to send email: " + JSON.stringify(err)); // Added alert to verify
         setSubmitStatus('error');
         setTimeout(() => {
           setSubmitStatus(null);
