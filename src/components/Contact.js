@@ -53,10 +53,13 @@ const Contact = () => {
           setSubmitStatus(null);
         }, 5000);
       } else {
-        throw new Error(data.message || 'Failed to send message');
+        // Throw the specific error from the server
+        throw new Error(data.error || data.message || 'Failed to send message');
       }
     } catch (error) {
       console.error('FAILED...', error);
+      // Show the actual error message in the alert
+      alert(`Error: ${error.message}`);
       setSubmitStatus('error');
       setTimeout(() => {
         setSubmitStatus(null);
