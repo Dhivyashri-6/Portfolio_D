@@ -8,9 +8,10 @@
     "dev": "nodemon scraper.js"
   },
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.18.2",
-    "puppeteer": "^21.5.0",
-    "cors": "^2.8.5"
+    "nodemailer": "^7.0.11",
+    "puppeteer": "^21.5.0"
   },
   "devDependencies": {
     "nodemon": "^3.0.1"
