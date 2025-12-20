@@ -22,8 +22,8 @@ export default async function handler(req, res) {
   try {
     // Send the email
     await transporter.sendMail({
-      from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender address
-      to: process.env.EMAIL_USER, // List of receivers (sending to yourself)
+      from: `"${name}" <${process.env.EMAIL_USER}>`, // Sender address (must be the authenticated email)
+      to: 'kkdhivyashri@gmail.com', // Your main email where you want to receive messages
       replyTo: email, // Reply to the user's email
       subject: `Portfolio Contact: ${subject}`, // Subject line
       text: `
