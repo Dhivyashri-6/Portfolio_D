@@ -7,12 +7,15 @@ export default async function handler(req, res) {
 
   const { name, email, subject, message } = req.body;
 
+  // Ensure password has no spaces
+  const pass = process.env.EMAIL_PASS ? process.env.EMAIL_PASS.replace(/\s+/g, '') : '';
+
   // Create a transporter using your Gmail account
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
       user: process.env.EMAIL_USER, // Your Gmail address
-      pass: process.env.EMAIL_PASS, // Your App Password
+      pass: pass, // Your App Password (cleaned)
     },
   });
 
